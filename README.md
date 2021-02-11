@@ -25,6 +25,19 @@ You can configure linter-jshint by editing `~/.atom/config.cson` (choose Open Yo
   disableWhenNoJshintrcFileInPath: false
 ```
 
+## Configuration
+in order to work with the version of JavaScript supported by all modern web browsers, you need to provide a JSON configuration file that sets the `esversion` property to 6, like this:
+```json
+{
+  "esversion": 6
+}
+```
+
+The above should be placed in a file called `.jshintrc`, located in the top-level directory of your project.
+
+If you do not do this, then JSHint will indicate errors when it encounters class definitions, for example.
+
+
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
 
